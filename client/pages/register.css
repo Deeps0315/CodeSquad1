@@ -1,0 +1,117 @@
+.App{
+    width: 1349px;
+    height: 655px;
+    background-color: black;
+  }
+  
+  .form_field{
+   padding: 10px;
+   margin: 20px;
+   background-color: rgb(101, 115, 160);
+   box-shadow: 3px 5px;
+   border: 1px solid white;
+   border-radius: 50px;
+  }
+  .imgbg2{
+    display: block;
+    margin-left: 65%;
+    margin-right: auto;
+    width: 110px;
+    height: 110px;
+  }
+  .imgbg22{
+    
+    width:70px;
+    height:50px;
+    padding-right: 0%;
+  }
+  .imgbg3{
+    padding-left:15px;
+    padding-right:15px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .hello{
+     position: absolute;
+    right: 50%;
+    left: 35%;
+    bottom: 10%;
+  }
+  
+  input{
+    width: 200px;
+    background-color: rgba(255,255,255,0);
+    border:none;
+    color:white;
+    font-size: 18px ;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+  }
+  input::placeholder{
+    color: white;
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+  }
+  .sign-in-outer{
+    width:200px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    top:0%;
+    border-bottom: 15px solid rgb(134, 124, 124);
+    border-right: 15px solid rgb(134, 124, 124);
+    border-radius: 70px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .sign-in-inner{
+    width:180px;
+    height: 180px;
+    background-color: white;
+    position: absolute;
+    top:0%;
+    border-radius: 30px;
+    border-top-left-radius:0px ;
+    color: rgb(70, 112, 189);
+  }
+  .sign-text{
+    position: absolute;
+    top:18%;
+    transform: rotate(-45deg);
+    font-size: 46px;
+    font-family: 'Marcellus SC', serif;
+  }
+  .Login-box{
+    width: 200px;
+   height: 190px;
+    background-color: white;
+    position: absolute;
+    bottom: 1%;
+    right: 0%;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border:20px solid grey;
+  }
+  .button:hover{
+    background-color: rgb(108, 155, 226);
+  }
+  .button{
+    background-color:rgb(130, 179, 252); 
+    border-radius:30px; 
+    display:block;
+     margin-left:20%;
+      border:none;
+      width:250px;
+    height:45px;
+    color:white;
+    font-size:24px;
+    font-family: 'Marcellus SC', serif;
+  }
+  .pname{
+    font-family: 'Marcellus SC', serif;
+    color: rgb(0, 217, 255);
+    font-size: 14px;
+  }
