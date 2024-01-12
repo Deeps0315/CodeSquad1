@@ -20,20 +20,21 @@ export default function Register() {
         name:'',
         email:'',
         password:'',
+        cpass:''
     }
     )
     const registerUser=async(e)=>{
         e.preventDefault();
-        const{name,email,password}=data
+        const{name,email,password,cpass}=data
         try{
             const {data}= await axios.post('/register',{
-                name,email,password
+                name,email,password,cpass
             })
             if(data.error){
                 toast.error(data.error)
             }else{
                 setData({})
-                toast.success('Login Successful. Welcome')
+                toast.success('Registered successfully! Welcome to CodeSquad:)')
                 navigate('/login')
             }
         }catch(error)
@@ -56,14 +57,8 @@ export default function Register() {
             <h1 >CodeSquad</h1>
             </div>
             </div>
+
         <form onSubmit={registerUser} style={{width:"400px"}} >
-            {/* <label>Name</label>
-            <input type="text" placeholder="enter name..." value={data.name} onChange={(e)=>setData({...data,name:e.target.value})}/>
-            <label>Email</label>
-            <input type="email" placeholder="enter email..." value={data.email} onChange={(e)=>setData({...data,email:e.target.value})}/>
-            <label>Password</label>
-            <input type="password" placeholder="entar password..." value={data.password} onChange={(e)=>setData({...data,password:e.target.value})}/>
-            <button type="submit">Submit</button> */}
              <div className="form_field">
     <img className="imgbg3" src={img3} alt=""/>
         <input  type="text" name="name" placeholder="NAME"
@@ -81,17 +76,19 @@ export default function Register() {
         </div>
         <div className="form_field">
         <img className="imgbg3" src={img6} alt=""/>
-        <input type="password" name="password" placeholder="CONFIRM PASSWORD"/>
+        <input type="password" name="cpass" placeholder="CONFIRM PASSWORD" value={data.cpass}
+         onChange={(e)=>setData({...data,cpass:e.target.value})}/>
         </div><div >
         <button className='button'>CREATE ACCOUNT</button></div>
-    
-        </form>
+    </form>
         </div>
+
     <div className='sign-in-outer'>
         <div className='sign-in-inner'>
             <h1 className='sign-text'>SIGN UP</h1>
         </div>
     </div>
+
     <div className='Login-box'>
         <h4 style={{color:'rgb(24, 79, 161)',display:"block" ,fontFamily: "'Marcellus SC', serif"}}>Already have an Account?</h4>
         <h1 style={{color:"rgb(24, 79, 161)",display:"block",marginLeft:"18%",fontFamily: "'Marcellus SC', serif"}}>LOG IN</h1>

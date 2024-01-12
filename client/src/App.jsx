@@ -15,10 +15,10 @@ function App() {
   
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
     <Toaster position='bottom-right' toastOptions={{duration:2000}} />    
     <Routes>
-      <Route path='/Navbar' element={<Navbar/>}/>
+      {/* <Route path='/Navbar' element={<Navbar/>}/> */}
       <Route path='/' element={<Home/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Login/>}/>

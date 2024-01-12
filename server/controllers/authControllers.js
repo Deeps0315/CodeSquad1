@@ -4,7 +4,7 @@ const test=(req,res)=>{
 }
 const registerUser=async(req,res)=>{
     try{
-        const {name,email,password}=req.body;
+        const {name,email,password,cpass}=req.body;
         //check if name was entered
         if(!name){
             return res.json({
@@ -17,6 +17,11 @@ const registerUser=async(req,res)=>{
                 error:'password is required and should be at least  6 character long'
             })
         };
+        if(cpass !=password){
+            return res.json({
+                error:'passwords are not matching'
+            })
+        }
         //check email if it exists
         const exist = await User.findOne({email});
         if(exist){
