@@ -1,0 +1,149 @@
+ @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-container{
+    background-color: #04263A;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+  
+  .input-group {
+    margin-bottom: 30px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px; 
+    background-color: #0a141e3b;
+    border-radius: 8px;
+    color:#ccc;
+    
+  }
+  .input-group input:hover{
+    background-color: #06162656;
+  }
+  
+  button {
+    
+    width: 50%;
+    padding: 10px;
+    background-color: #0100014a;
+    color: rgb(239, 231, 231);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #06162656;
+  }
+  .circle {
+    height: 5cm;
+    width: 5cm;
+    background: linear-gradient(180deg,#e84ee3,#bb05be,#04263A);
+    border-radius: 50%;
+    position: absolute;
+    left:90px;
+    bottom:10px;
+  }
+  .circle1 {
+    height: 3cm;
+    width: 3cm;
+    background: linear-gradient(180deg,#15b03c,#0a520c, #04263A);
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left:90px;
+  }
+  .circle2 {
+    height: 6cm;
+    width: 6cm;
+    background: linear-gradient(180deg,#59ccef,#0c60a5, #04263A);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right:20px
+  }
+  .circle3 {
+    height: 1cm;
+    width: 1cm;
+    background: linear-gradient(180deg,#cae17f,#a59912, #04263A);
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    right:35%;
+  }
+  /* .quadrilaterals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Irregular Quadrilateral 1 */
+  .irregular1 {
+    position: absolute;
+    top: 0%;
+    right:0%;
+    width: 6cm;
+    height: 10cm;
+    background-color: #FFD700; /* Color for visualization */
+    transform: perspective(100px) rotate(45deg);
+    border-radius: 20px;
+}
+
+img {
+  position: absolute;
+  left:6cm;
+  bottom: 50;
+  width:27%;
+  height:auto;
+}
+.input-group img{
+  width:2%;
+  position: absolute;
+  left:16cm;
+  filter:invert(100%);
+
+}
+.container h2{
+  font-family: 'Bree Serif', serif;
+  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+margin-bottom: 20px;
+}
+

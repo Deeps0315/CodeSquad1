@@ -37,7 +37,28 @@ const registerUser=async(req,res)=>{
 console.log(error)
     }
 }
+const loginUser=async (req, res)=>{
+try{
+const {name, password}=req.body;
+
+//check if user exists
+const user=await User.findOne({name});
+if(!user){
+    return res.json({
+        error:'No user found'
+    })   
+}
+//check if password match
+const match=await comparePassword(password, user.password)
+if (match){
+   res.json('password match')
+}
+}catch(error){
+  console.log(error)
+}
+}
 module.exports={
     test,
-    registerUser
-}
+    registerUser,
+    loginUser
+};
