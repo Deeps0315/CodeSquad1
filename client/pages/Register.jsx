@@ -46,60 +46,7 @@ export default function Register() {
 
 
     return(
-    //     <div style={{position: "relative", top:"0px", width:"100%", height:"100%"}}>
-            
-    //     <div className='head-image'>
-    //     <img style={{ width:"100%", height: "100%"}}src={img1} alt=""/>
-    //     </div>
-    //     <div className="hello">
-    //         <img className="imgbg2" src={img8} alt=""/>
-    //         <div style={{width:"10px",height:"60px", display:"grid", alignItems:"center", gridTemplateColumns:"1fr 1fr 1fr",columnGap:"5px"}}>
-    //         <img className="imgbg22" src={img2} alt=""/>
-    //         <div className='pname' >
-    //         <h1 >CodeSquad</h1>
-    //         </div>
-    //         </div>
-
-    //     <form onSubmit={registerUser} style={{width:"400px"}} >
-    //          <div className="form_field">
-    // <img className="imgbg3" src={img3} alt=""/>
-    //     <input  type="text" name="name" placeholder="NAME"
-    //      value={data.name} onChange={(e)=>setData({...data,name:e.target.value})} />
-    //     </div>
-    //     <div className="form_field">
-    //     <img className="imgbg3" src={img4} alt=""/>
-    //     <input  type="email" name="email" placeholder="EMAIL"
-    //     value={data.email} onChange={(e)=>setData({...data,email:e.target.value})}/>
-    //     </div>
-    //     <div className="form_field">
-    //     <img className="imgbg3" src={img5} alt=""/>
-    //     <input type="password" name="password" placeholder="PASSWORD"
-    //     value={data.password} onChange={(e)=>setData({...data,password:e.target.value})}/>
-    //     </div>
-    //     <div className="form_field">
-    //     <img className="imgbg3" src={img6} alt=""/>
-    //     <input type="password" name="cpass" placeholder="CONFIRM PASSWORD" value={data.cpass}
-    //      onChange={(e)=>setData({...data,cpass:e.target.value})}/>
-    //     </div><div >
-    //     <button className='button'>CREATE ACCOUNT</button></div>
-    // </form>
-    //     </div>
-
-    // <div className='sign-in-outer'>
-    //     <div className='sign-in-inner'>
-    //         <h1 className='sign-text'>SIGN UP</h1>
-    //     </div>
-    // </div>
-
-    // <div className='Login-box'>
-    //     <h4 style={{color:'rgb(24, 79, 161)',display:"block" ,fontFamily: "'Marcellus SC', serif"}}>Already have an Account?</h4>
-    //     <h1 style={{color:"rgb(24, 79, 161)",display:"block",marginLeft:"18%",fontFamily: "'Marcellus SC', serif"}}>LOG IN</h1>
-    //     <button style={{border:"none",backgroundColor:"white",display:"block",marginLeft:"20%"}}  > 
-    //     <img style={{display:"block",marginLeft:"10%", width:"90px",height:"55px"}}  src={img7} alt=""/>
-    //     </button>
-    // </div>
-    // </div>
-    // )
+   
     <div id="full"> 
         
             

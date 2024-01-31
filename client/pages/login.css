@@ -55,7 +55,7 @@
     background-color: #06162656;
   }
   
-  button {
+  /* button {
     
     width: 50%;
     padding: 10px;
@@ -65,11 +65,11 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-  }
+  } */
   
-  button:hover {
+  /* button:hover {
     background-color: #06162656;
-  }
+  } */
   .circle {
     height: 5cm;
     width: 5cm;
@@ -125,13 +125,13 @@
     border-radius: 20px;
 }
 
-img {
+/* img {
   position: absolute;
   left:6cm;
   bottom: 50;
   width:27%;
   height:auto;
-}
+} */
 .input-group img{
   width:2%;
   position: absolute;
@@ -145,4 +145,7 @@ img {
   font-family: 'Nunito Sans', sans-serif;
   text-align: center;
 margin-bottom: 20px;
+}
+input{
+  color:black;
 }

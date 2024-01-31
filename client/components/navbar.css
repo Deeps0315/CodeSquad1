@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
-#navbar{
+/* #nav{
     top:0%;
     display:flex;
     align-items: center;
@@ -10,7 +10,7 @@
     width: 100%;
     left:0px;
 }
-#navbar::before{
+#nav::before{
     content: "";
     background-color: black;
     position: absolute;
@@ -18,10 +18,14 @@
     width: 100%;
    top:0px;
    opacity: 0.4;
+} */
+#nav{
+    display: flex;
 }
 /* Navbar: logo and image */
 #logo{
  margin: 5px 20px;
+ display: flex;
 }
 
 #logo img{
@@ -30,24 +34,24 @@
 }
 /* Navbar :listing style */
 
-#navbar ul{
+ ul{
     display:flex;
    
 }
 
-#navbar ul li{
+ul li{
     
     list-style: none;
     font-size: 1.3rem;
 }
-#navbar ul li a{
+ul li a{
     color: black;
     display: block;
     padding: 3px 22px;
     border-radius: 20px;
     text-decoration: none;
 }
-#navbar ul li a:hover{
-    color: rgb(255, 255, 255);
+ul li a:hover{
+    color: black;
     background-color: white;
 }

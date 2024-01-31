@@ -2,6 +2,7 @@ import {useState} from "react";
 import axios from "axios";
 import {toast} from 'react-hot-toast'
 import { useNavigate } from "react-router-dom";
+import './login.css';
 
 export default function Login() {
     const navigate=useNavigate()
@@ -22,6 +23,7 @@ export default function Login() {
             toast.error(data.error)
         } else{
             setData({});
+            toast.success('Successfully Logined!!! ')
             navigate('/')
         }
        }catch(error){
