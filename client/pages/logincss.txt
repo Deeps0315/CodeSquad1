@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+
+/* .container{
+  margin: 0;
+  padding: 0;
+  background-image:url('./assests/login-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height:100vh;
+  justify-content: end;
+  overflow: auto;
+  z-index: -1;
+} */
+#page{
+  display: flex;
+  justify-content: center;
+}
+#login{
+  display: flex;
+      flex-direction:column;
+      height: 425px;
+      justify-content: center;
+      align-items: center;
+      left: 30px;
+}
+  #login::before{
+    background: url('./assests/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  content: "";
+  position: absolute;
+  
+  height: 100vh;
+  top:0px;
+  left:0px;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  }
+ /* .input-container{
+  
+  padding-bottom: 30px;
+  width:400px;
+  height: 400px;
+  float:left;
+  background-color: #88c6e5a0;
+  border-radius: 30px;
+  justify-content: center;
+  position: relative;
+  top:4cm;
+  left:5cm;
+ } */
+  #login form{
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+   
+  width:400px;
+  height: 400px;
+  float:left;
+  background-color: #88c6e5a0;
+  border-radius: 30px;
+  justify-content: center;
+  position: relative;
+ 
+  }
+
+  .input-group {
+    margin-bottom: 41px;
+
+  }
+  /* input{
+    width: 200px;
+    background-color: rgba(255,255,255,0);
+    border:none;
+    color:white;
+    font-size: 18px ;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+  }*/
+  .input-group input::placeholder{
+    color: rgb(6, 6, 6);
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+  }
+   
+  .input-group input {
+    width: 80%;
+    margin-left:11px;
+
+    font-size: 16px; 
+    border-radius: 8px; 
+    border-bottom: 2px solid black;
+  }
+  .input-group input:hover{
+    background-color: #9ba1a77a;
+  }
+  
+  
+.input-group img{
+  width:30px;
+  position: relative;
+  top:30px;
+  margin-left: 8px;
+}
+.google{
+  display: flex;
+  width:400px;
+  height: 100px;
+  float:left;
+  background-color: #63bbe7a0;
+  border-radius: 30px;
+  justify-content: center;
+  position: relative;
+
+  text-align: center;
+  margin-bottom: 48px;
+}
+.line{
+  position: absolute;
+  float: left;
+  width: 8px;
+  height: 400px;
+  background-color: #04263A;
+  position: relative;
+  
+}
+.google img{
+  width: 82px;
+    height: 86px;
+    position: relative;
+    margin-top: 5px;
+    margin-left: -59px;
+
+}
+.box{
+  padding: 34px;
+  margin: 3px 6px;
+}
+
+#page .box{
+  padding: 10px; 
+ }
+ .Signup{
+  
+  width:400px;
+  height: 100px;
+  float:left;
+  background-color: #63bbe7a0;
+  border-radius: 30px;
+  justify-content: center;
+  position: relative;}
+  .heading img{
+    position: relative;
+    width:100px;
+    height:auto;
+    left: 33%;
+    top: -67px ;
+  }
+  .Signup {
+    font-size: 24px;
+    font-family: 'cursive';
+    font-weight: bold;
+    
+  }
+ @media screen and (max-width:976px) {
+  #page {
+    flex-direction: column;
+  }
+  #login::before{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+.line{
+  width: 400px;
+  height: 8px;
+}
+}

@@ -1,0 +1,89 @@
+import './login.css';
+import React, { useState } from 'react';
+import axios from 'axios';
+import {toast} from 'react-hot-toast';
+import {Link,useNavigate} from 'react-router-dom';
+import robo from './assests/robo.png';
+import user from './assests/user.png';
+import key from './assests/key.png';
+import google from './assests/googlebg.png';
+
+const Login = () => {
+  const navigate=useNavigate();
+   const [formData, setFormData] = useState({
+     name: '',
+     password: '',
+   })
+  
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+    // Add your authentication logic here (e.g., API call, validation)
+    const {name, password}=formData
+    try{
+       const {formData}=await axios.post('/login',{
+        name,
+        password
+       });
+       if(formData.error){
+        toast.error(formData.error)
+       }else{
+        setFormData({});
+        navigate('/')
+       }
+    }catch(error){
+    }
+
+  return (
+    <div className="container" >
+    <div className='heading'>
+        <h4 style={{fontFamily:'cursive',fontSize:'25px',fontWeight:'bold',padding:'10px',marginTop:'60px'}}>CodeSquad</h4>
+        <img src={robo} alt="robot"/>
+    </div>   
+    <div id='page'>
+      <div className='box'>
+        <section id='login'>
+       <form onSubmit={loginUser} >
+       
+      
+      {/* <div className='input-container' > */}
+      <h2 style={{color:"#064251",fontFamily:"cursive",fontSize:30,fontWeight:"bold",marginTop:"-150px",marginBottom:'10px'}}>Login</h2>
+      <div className='input-group'>
+      <img src={user} alt="userlogo"/>
+      <input name="name" placeholder="NAME" value={formData.name}
+       onChange={(e)=>{ setFormData({...formData,name:e.target.value})}}type="text"  
+       />
+      </div>
+      <div className='input-group'>
+      <img src={key} alt="key logo"/>
+     <input type="password" name="password" value={formData.password}  placeholder="PASSWORD"
+    onChange={(e)=>{ setFormData({...formData,password:e.target.value})}} 
+    />
+   </div>
+  
+    <button type="submit" style={{color:"#072f3b",fontFamily:"cursive",fontSize:"20px",fontWeight:'bold',marginTop:'10px',marginBottom:'-100px',marginLeft:'90px'}}>LogIn</button>
+  </form>
+  </section>
+  </div>
+  <div className='box'>
+  <div className='line'>
+  </div></div>
+  <div className='box'>
+    <section id="login">
+  <div className='google'>
+    <img src={google} alt="logo"/>
+    <h5 style={{color:"blue",fontFamily:"revert",fontSize:"20px",fontWeight:'bold',marginTop:'40px'}}>Continue with Google</h5>  
+  </div>
+  <div className='Signup'>
+    <h5 style={{color:"#072f3b",fontFamily:"cursive",fontSize:"20px",fontWeight:'bold'}}>Do not have an account?</h5>
+    <Link to={'/register'} style={{fontFamily:'cursive',color:'#FF3A33'}}>Sign Up</Link>
+  </div>
+  </section>
+  </div>
+  </div>
+ </div>
+ 
+  );
+  }
+}
+ export default Login;

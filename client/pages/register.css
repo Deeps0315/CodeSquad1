@@ -1,11 +1,19 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comfortaa&family=Nunito+Sans:wght@200&display=swap');
 .acme-regular {
   font-family: "Acme", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
 
   
   #page{
@@ -34,14 +42,14 @@
   left:0px;
   width: 100%;
   z-index: -1;
-  opacity: 1;
+  opacity: 0.6;
   }
   #heading{
     
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     margin-top: 50px;
     
   }
@@ -82,15 +90,15 @@
    }
    .button{
     background-color:rgb(7, 18, 39); 
-    border-radius:30px; 
+    /* border-radius:30px;  */
     display:block;
-     margin-left:16%;
+     margin-left:9%;
       border:none;
-      width:275px;
     height:45px;
     color:white;
     font-size:24px;
-    font-family:acme;
+    font-family: cursive;
+    padding-bottom: 39px;
   }
   input{
     width: 200px;
@@ -114,7 +122,7 @@
     position: relative;
     
     font-size: 12px;
-    font-family: acme;
+    font-family: cursive;
   }
   .main{
     display: flex;
@@ -122,7 +130,7 @@
     justify-content: center;
     font-size: 30px;
     margin-bottom: 0%;
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
   #heading2{
     display: flex;
@@ -156,19 +164,9 @@
     top:18%;
     transform: rotate(-45deg);
     font-size: 46px;
-    font-family: acme;
+    font-family: revert;
   }
-  .line{
-    display: flex;
-    top: 7rem;
-    /* left: -27px; */
-    position: relative;
-    border-radius: 20px;
-    height: 410px;
-    width: 8px;
-    margin: 30px;
-    background-color: black;
-}
+ 
 .rtol{
   border-radius: 40px;
     background-color: rgb(204, 200, 200);
@@ -179,27 +177,27 @@
 }
 hr{
   height: 400px;
-  width:5px;
+  width:10px;
   background-color: black;
-  border-radius: 40px;
   border-color: #000000;
   position: absolute;
   
 }
-.rtol p{
-  font-family: acme;
+.rtol h5{
+  font-family:cursive;
   font-size: 25px;
   padding-bottom: 30px;
+  padding-top: 20px;
 }
 .rtol :link{
   justify-content: center;
 }
 #page .box{
  padding: 10px;
- 
-  
 }
-
+.visible1{
+  margin-left: 42px;
+}
 @media screen and (max-width:971px) {
   #page {
     flex-direction: column;
@@ -222,7 +220,7 @@ hr{
   
   width: 450px;
   height: 5px;
-  top: 638px;
+  
   
 
 }

@@ -1,22 +1,30 @@
 import {useState} from "react";
 import axios from "axios";
 import {toast} from 'react-hot-toast'
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
+import {EyeInvisibleOutlined, EyeOutlined} from "@ant-design/icons";
 import './login.css';
 
-export default function Login() {
+import robo from './images/robo.png';
+import user from './images/user.png';
+import key from './images/key.png';
+import google from './images/googlebg.png';
+
+
+export default function login() {
     const navigate=useNavigate()
     const [data, setData]=useState({
-        email:'',
+        name:'',
         password:'',
     }
     )
+    const[visible,setVisible]=useState(false);
     const loginUser=async(e)=>{
         e.preventDefault();
-       const {email,password}=data
+       const {name,password}=data
        try{
         const{data}=await axios.post('/login',{
-            email, 
+            name, 
             password
         });
         if(data.error){
@@ -33,12 +41,56 @@ export default function Login() {
 
 
     return(
-        <form onSubmit={loginUser}>
-            <label>Email</label>
-            <input type="email" placeholder="enter email..." value={data.email} onChange={(e)=>setData({...data,email:e.target.value})}/>
-            <label>Password</label>
-            <input type="password" placeholder="entar password..." value={data.password} onChange={(e)=>setData({...data,password:e.target.value})}/>
-            <button type="submit">Login</button>
-        </form>
+        <div className="container" >
+        <div className='heading'>
+            <h4 style={{fontFamily:'cursive',fontSize:'32px',fontWeight:'bold',padding:'10px',marginTop:'40px'}}>CodeSquad</h4>
+            <img src={robo} alt="robot"/>
+        </div>   
+        <div id='page'>
+          <div className='box1'>
+        <section id='login'>
+        <form onSubmit={loginUser} >
+        
+       
+       {/* <div className='input-container' > */}
+       <h2 style={{color:"#064251",fontFamily:"cursive",fontSize:30,fontWeight:"bold",marginTop:"-150px",marginBottom:'10px'}}>Login</h2>
+       <div className='input-group'>
+       <img src={user} alt="userlogo"/>
+       <input name="name" placeholder="NAME" value={data.name}
+        onChange={(e)=>{ setData({...data,name:e.target.value})}}type="name"  
+        />
+       </div>
+       <div className='input-group'>
+       <img src={key} alt="key logo"/>
+      <input type={visible ? "text":"password"}
+       name="password" value={data.password}  placeholder="PASSWORD"
+     onChange={(e)=>{ setData({...data,password:e.target.value})}} 
+     />
+     <div className="visible1" onClick={()=>setVisible(!visible)}>{
+            visible ? <EyeOutlined/>:<EyeInvisibleOutlined/>
+            }</div>
+    </div>
+   
+     <button type="submit" style={{color:"#072f3b",fontFamily:"cursive",fontSize:"20px",fontWeight:'bold',marginTop:'10px',marginBottom:'-100px'}}>LogIn</button>
+   </form>
+   </section>
+   </div>
+  <div className='box1'>
+  <div className='line'>
+  </div></div>
+     <div className='box1'>
+     <section id="login">
+   <div className='google'>
+     <img src={google} alt="logo"/>
+    <h5 style={{color:"blue",fontFamily:"revert",fontSize:"20px",fontWeight:'bold',marginTop:'40px'}}>Continue with Google</h5>  
+   </div>
+   <div className='Signup'>
+     <h5 style={{color:"#072f3b",fontFamily:"cursive",fontSize:"20px",fontWeight:'bold'}}>Do not have an account?</h5>
+     <Link to={'/register'} style={{fontFamily:'cursive',color:'#FF3A33'}}>Sign Up</Link>
+   </div>
+   </section>
+   </div>
+   </div>
+  </div>
     )
 }
