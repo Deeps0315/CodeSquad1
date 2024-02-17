@@ -4,7 +4,8 @@ import {toast} from 'react-hot-toast'
 import {Link, useNavigate } from "react-router-dom";
 import {EyeInvisibleOutlined, EyeOutlined} from "@ant-design/icons";
 import './login.css';
-
+import{auth, provider} from '../src/firebase';
+import {signInWithPopup} from 'firebase/auth';
 import robo from './images/robo.png';
 import user from './images/user.png';
 import key from './images/key.png';
@@ -38,7 +39,12 @@ export default function login() {
 
        }
     }
-
+     
+    const  signInWithGoogle=async()=>{
+      const result=await signInWithPopup(auth,provider);
+      console.log(result);
+      navigate('/');
+    };
 
     return(
         <div className="container" >
@@ -82,7 +88,7 @@ export default function login() {
      <section id="login">
    <div className='google'>
      <img src={google} alt="logo"/>
-    <h5 style={{color:"blue",fontFamily:"revert",fontSize:"20px",fontWeight:'bold',marginTop:'40px'}}>Continue with Google</h5>  
+     <button onClick={signInWithGoogle}style={{color:"blue",fontFamily:"revert",fontSize:"20px",fontWeight:'bold',marginTop:'5px',backgroundColor:"transparent",border:"none"}}>Continue with Google</button>  
    </div>
    <div className='Signup'>
      <h5 style={{color:"#072f3b",fontFamily:"cursive",fontSize:"20px",fontWeight:'bold'}}>Do not have an account?</h5>

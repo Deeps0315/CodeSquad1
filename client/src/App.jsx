@@ -10,6 +10,8 @@ import ContactUs from '../pages/ContactUs';
 import axios from 'axios';
 import {Toaster} from 'react-hot-toast'
 import Navbar from '../components/Navbar';
+import SortingVisualizer from '../pages/dsa/SortingVisualizer/SortingVisualizer';
+import PathFindingVisualizer from '../pages/dsa/PathFindingVisualizer';
 
 axios.defaults.baseURL='http://localhost:8000';
 axios.defaults.withCredentials= true;
@@ -30,6 +32,9 @@ function App() {
       <Route path='/PLang' element={<PLang/>}/>
       <Route path='/aboutUs' element={<AboutUs/>}/>
       <Route path='/contactUs' element={<ContactUs/>}/>
+      <Route path='/pathFindingVisualizer' element={<PathFindingVisualizer/>}/>
+      <Route path='sortingVisualizer' element={<SortingVisualizer/>}/>
+      
     </Routes>
     
     </div>

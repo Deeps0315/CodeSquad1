@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.css"
-
+import PathfindingVisualizer from './dsa/PathFindingVisualizer';
 import DSA from "./images/DSA.png"
 import Lang from "./images/Language.png"
 import Video from "./images/video.png"
@@ -81,7 +81,7 @@ responsive: [
          <div id='m-feature'>
              <div className="container1" style={{backgroundColor:"rgba(41, 45, 50, 1)"}} >
                  <img src={DSA} alt=""/>
-                 <Link to='/' >DSA Visualizer</Link>
+                 <Link to='/PathFindingVisualizer' >DSA Visualizer</Link>
                 
              </div>
              </div>
